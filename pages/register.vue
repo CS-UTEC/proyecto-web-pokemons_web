@@ -761,7 +761,9 @@
           </b-col>
         </b-row>
         <b-row align-h="center">
-          <b-button type="submit" variant="violet">Enviar Solicitud</b-button>
+          <b-button type="submit" variant="violet" @click="onSubmit"
+            >Enviar Solicitud</b-button
+          >
         </b-row>
       </b-form>
     </b-row>
@@ -772,6 +774,7 @@
   export default {
     data() {
       return {
+        aceptado: false,
         form: {
           name: '',
           lastname: '',
@@ -779,6 +782,7 @@
           mail: '',
           type: null,
           quantity: null,
+          refuge: '',
           owner: 'si',
           own: 'propio',
           years: null,
@@ -885,6 +889,91 @@
           this.form.cats[index].file = e.target.result
         }
         reader.readAsDataURL(file)
+      },
+      async onSubmit() {
+        const url = '/albergue'
+        const json = {
+          admin: {
+            nombre: this.form.name,
+            apellidos: this.form.lastname,
+            representante: this.form.owner,
+            celular: this.form.cellphone,
+            correo: this.form.mail,
+          },
+          albergue: {
+            nombre: this.form.refuge,
+            anios: this.form.years,
+            direccion: this.form.address,
+            urbanizacion: this.form.urbanization,
+            distrito: this.form.district,
+            ciudad: this.form.city,
+            departamento: this.form.department,
+            tamanio: this.form.size,
+            material: this.form.material,
+            gasto: this.form.budget,
+            pertenencia: this.form.own,
+            voluntarios: this.form.volunteers,
+            albergan: this.form.type,
+            num_gatos: this.form.quantity,
+            acep_donaciones: this.form.donations,
+            acep_apoyo: this.form.aceptVolunteers,
+            banco_name: 'bcp',
+            banco_number: this.form.bcp,
+            banco_cci: this.form.bcpCci,
+            facebook: this.form.facebook,
+            instagram: this.form.instagram,
+            correo: this.form.email,
+            otro_contacto: this.form.otherContact,
+          },
+          gato0: {
+            nombre: this.cats[0].nombre,
+            img: this.cats[0].file,
+            edad: this.cats[0].edad,
+            adopcion: this.cats[0].adopta,
+          },
+          gato1: {
+            nombre: this.cats[1].nombre,
+            img: this.cats[1].file,
+            edad: this.cats[1].edad,
+            adopcion: this.cats[1].adopta,
+          },
+          gato2: {
+            nombre: this.cats[2].nombre,
+            img: this.cats[2].file,
+            edad: this.cats[2].edad,
+            adopcion: this.cats[2].adopta,
+          },
+          gato3: {
+            nombre: this.cats[3].nombre,
+            img: this.cats[3].file,
+            edad: this.cats[3].edad,
+            adopcion: this.cats[3].adopta,
+          },
+          gato4: {
+            nombre: this.cats[4].nombre,
+            img: this.cats[4].file,
+            edad: this.cats[4].edad,
+            adopcion: this.cats[4].adopta,
+          },
+          gato5: {
+            nombre: this.cats[5].nombre,
+            img: this.cats[5].file,
+            edad: this.cats[5].edad,
+            adopcion: this.cats[5].adopta,
+          },
+        }
+        /* eslint-disable */
+        await this.$axios
+          .$post(url, json)
+          .then((res) => {
+            this.aceptado = res
+            console.log('Aceptado')
+            this.$router.push('/login')
+          })
+          .catch((e) => {
+            console.log('Problemas')
+            console.log(e)
+          })
       },
     },
   }
