@@ -10,7 +10,7 @@
           width="150"
         />
       </b-col>
-      <b-col md="11" class="t-bebas display-2 text-center">
+      <b-col md="11" class="text-center">
         <span class="text-uppercase text-white">
           solicitud de albergue gatuno
         </span>
@@ -18,20 +18,20 @@
     </b-row>
     <b-row class="info" align-v="center">
       <b-col md="4">
-        <b-row align-h="center" class="t-bebas violet info-title"
+        <b-row align-h="center" class="violet info-title"
           >¿Qué es Meowtec?</b-row
         >
-        <b-row class="p-info t-quicksand" align-content="center"
+        <b-row class="p-info" align-content="center"
           >Es una organización conformada por estudiantes de ingeniería y
           ciencias con el propósito de mejorar la vida de los gatos callejeros
           de nuestro país.</b-row
         >
       </b-col>
       <b-col md="4" class="yellow-circles">
-        <b-row align-h="center" class="t-bebas violet info-title pr-3 pl-3"
+        <b-row align-h="center" class="violet info-title pr-3 pl-3"
           >¿Cuáles son los requisitos para pertenecer a Meowtec?</b-row
         >
-        <b-row class="p-info t-quicksand">
+        <b-row class="p-info">
           <p>
             Pueden aplicar todos los albergues que tengan
             <span class="blue">más de 6 gatos</span> en situación de rescatados
@@ -40,18 +40,18 @@
         </b-row>
       </b-col>
       <b-col md="4">
-        <b-row align-h="center" class="t-bebas violet info-title"
+        <b-row align-h="center" class="violet info-title"
           >¿Por qué utilizar la web de Meowtec?</b-row
         >
-        <b-row class="p-info t-quicksand" align-content="center"
+        <b-row class="p-info" align-content="center"
           >Porque somos una plataforma gratuita que verificará y respaldará su
           albergue brindando seguridad y confianza para las personas que quieran
           ayudar.</b-row
         >
       </b-col>
     </b-row>
-    <b-row>
-    <div class="form-register t-quicksand">
+    <b-row class="mt-5">
+      <div class="form-register">
         <!-- Hablanos de ti -->
         <b-row>
           <b-col md="3">
@@ -64,7 +64,7 @@
           </b-col>
           <b-col md="9">
             <b-row>
-              <div class="t-fredoka form-header text-uppercase violet">
+              <div class="form-header text-uppercase violet">
                 háblanos de ti
               </div>
             </b-row>
@@ -130,7 +130,7 @@
           </b-col>
           <b-col md="9">
             <b-row>
-              <div class="t-fredoka form-header text-uppercase violet">
+              <div class="form-header text-uppercase violet">
                 háblanos del albergue
               </div>
             </b-row>
@@ -314,7 +314,7 @@
           </b-col>
           <b-col md="9">
             <b-row>
-              <div class="t-fredoka form-header text-uppercase violet">
+              <div class="form-header text-uppercase violet">
                 fotos de los gatos del albergue
               </div>
             </b-row>
@@ -408,7 +408,7 @@
           </b-col>
           <b-col md="9">
             <b-row>
-              <div class="t-fredoka form-header text-uppercase violet">
+              <div class="form-header text-uppercase violet">
                 canales de donación
               </div>
             </b-row>
@@ -575,7 +575,6 @@
             </b-row>
           </b-col>
         </b-row>
-        <!-- Contacto -->
         <b-row>
           <b-col md="3">
             <b-img
@@ -587,7 +586,7 @@
           </b-col>
           <b-col md="9">
             <b-row>
-              <div class="t-fredoka form-header text-uppercase violet">
+              <div class="form-header text-uppercase violet">
                 contacto
               </div>
             </b-row>
@@ -649,7 +648,6 @@
             </b-row>
           </b-col>
         </b-row>
-               <!-- Recomendaciones -->
         <b-row>
           <b-col md="3">
             <b-img
@@ -661,7 +659,7 @@
           </b-col>
           <b-col md="9">
             <b-row>
-              <div class="t-fredoka form-header text-uppercase violet">
+              <div class="form-header text-uppercase violet">
                 recomendaciones (opcional)
               </div>
             </b-row>
@@ -763,7 +761,9 @@
           </b-col>
         </b-row>
         <b-row align-h="center">
-          <b-button type="submit" variant="violet">Enviar Solicitud</b-button>
+          <b-button type="submit" variant="violet" @click="onSubmit"
+            >Enviar Solicitud</b-button
+          >
         </b-row>
       </div>
     </b-row>
@@ -933,41 +933,6 @@
           otro_contacto: this.form.otherContact,
         }
         const gato0 = {
-          nombre:
-        const formData = new FormData()
-        const admin = {
-          nombre: this.form.name,
-          apellidos: this.form.lastname,
-          representante: this.form.owner === 'si',
-          celular: this.form.cellphone,
-          correo: this.form.mail,
-        }
-        const albergue = {
-          nombre: this.form.refuge,
-          anios: this.form.years,
-          direccion: this.form.address,
-          urbanizacion: this.form.urbanization,
-          distrito: this.form.district,
-          ciudad: this.form.city,
-          departamento: this.form.department,
-          tamanio: this.form.size,
-          material: this.form.material,
-          gasto: this.form.budget,
-          pertenencia: this.form.own === 'propio',
-          voluntarios: this.form.volunteers,
-          albergan: this.form.type,
-          num_gatos: this.form.quantity,
-          acep_donaciones: this.form.donations === 'si',
-          acep_apoyo: this.form.aceptVolunteers === 'si',
-          banco_name: 'bcp',
-          banco_number: this.form.bcp,
-          banco_cci: this.form.bcpCci,
-          facebook: this.form.facebook,
-          instagram: this.form.instagram,
-          correo: this.form.email,
-          otro_contacto: this.form.otherContact,
-        }
-        const gato0 = {
           nombre: this.form.cats[0].nombre,
           edad: this.form.cats[0].edad,
           adopcion: this.form.cats[0].adopta === 'Si',
@@ -1014,6 +979,21 @@
           console.log(formData)
         }
         formData.append('data', JSON.stringify(data))
-        /* eslint-disable */formjson:  {}{ :}'Content-Type:' : 'multipart/forformDatata'
-             ,
-        'Content-Type': false, processData: false
+        /* eslint-disable */
+        await this.$axios
+          .$post(url, formData, {
+            headers: { 'Content-Type': false, processData: false },
+          })
+          .then((res) => {
+            // this.aceptado = res
+            console.log(res)
+            this.$router.push('/login')
+          })
+          .catch((e) => {
+            console.log('Problemas')
+            console.log(e)
+          })
+      },
+    },
+  }
+</script>
