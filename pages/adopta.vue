@@ -13,7 +13,7 @@
     <b-col md="9" class="maxHeight">
       <b-row align-v="start" align-h="around">
         <v-card
-          v-for="gato in handleSearch"
+          v-for="(gato, index) in handleSearch"
           :key="gato.nombre"
           outlined
           class="t-bebas m-2"
@@ -21,16 +21,19 @@
           <v-list-item>
             <b-row align-h="center">
               <b-col>
-                <b-img class="cat-photo" alt="" fluid></b-img>
+                <b-img
+                  class="cat-photo"
+                  alt=""
+                  :src="imgUrl[index]"
+                  fluid
+                ></b-img>
                 <br />
                 <div>
                   {{ gato.nombre }}
                 </div>
+                <div>{{ gato.edad }} meses</div>
                 <div>
-                  {{ gato.edad }}
-                </div>
-                <div>
-                  {{ gato.albergue }}
+                  {{ gato.albergue || 'albergue' }}
                 </div>
               </b-col>
             </b-row>
@@ -68,6 +71,14 @@
             gato.edad == this.searchVideo ||
             gato.albergue.includes(this.searchVideo)
           )
+        })
+      },
+      imgUrl() {
+        /* eslint-disable */
+        // console.log(index)
+        return this.data.map((gato) => {
+          console.log(gato.img.replace('home/ubuntu', '/52.67.175.153'))
+          return gato.img.replace('home/ubuntu', '/52.67.175.153')
         })
       },
     },

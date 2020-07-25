@@ -976,7 +976,7 @@
           const file = this.form.cats[i].file
           formData.append('files[' + i + ']', file)
           /* eslint-disable */
-          console.log(formData)
+          /* console.log(formData) */
         }
         formData.append('data', JSON.stringify(data))
         /* eslint-disable */
