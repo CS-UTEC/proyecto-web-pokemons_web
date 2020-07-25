@@ -10,7 +10,7 @@
           width="150"
         />
       </b-col>
-      <b-col md="11" class="text-center">
+      <b-col md="11" class="t-bebas display-2 text-center">
         <span class="text-uppercase text-white">
           solicitud de albergue gatuno
         </span>
@@ -18,20 +18,20 @@
     </b-row>
     <b-row class="info" align-v="center">
       <b-col md="4">
-        <b-row align-h="center" class="violet info-title"
+        <b-row align-h="center" class="t-bebas violet info-title"
           >¿Qué es Meowtec?</b-row
         >
-        <b-row class="p-info" align-content="center"
+        <b-row class="p-info t-quicksand" align-content="center"
           >Es una organización conformada por estudiantes de ingeniería y
           ciencias con el propósito de mejorar la vida de los gatos callejeros
           de nuestro país.</b-row
         >
       </b-col>
       <b-col md="4" class="yellow-circles">
-        <b-row align-h="center" class="violet info-title pr-3 pl-3"
+        <b-row align-h="center" class="t-bebas violet info-title pr-3 pl-3"
           >¿Cuáles son los requisitos para pertenecer a Meowtec?</b-row
         >
-        <b-row class="p-info">
+        <b-row class="p-info t-quicksand">
           <p>
             Pueden aplicar todos los albergues que tengan
             <span class="blue">más de 6 gatos</span> en situación de rescatados
@@ -40,10 +40,10 @@
         </b-row>
       </b-col>
       <b-col md="4">
-        <b-row align-h="center" class="violet info-title"
+        <b-row align-h="center" class="t-bebas violet info-title"
           >¿Por qué utilizar la web de Meowtec?</b-row
         >
-        <b-row class="p-info" align-content="center"
+        <b-row class="p-info t-quicksand" align-content="center"
           >Porque somos una plataforma gratuita que verificará y respaldará su
           albergue brindando seguridad y confianza para las personas que quieran
           ayudar.</b-row
@@ -51,7 +51,7 @@
       </b-col>
     </b-row>
     <b-row class="mt-5">
-      <b-form class="form-register">
+      <b-form class="form-register t-quicksand">
         <!-- Hablanos de ti -->
         <b-row>
           <b-col md="3">
@@ -64,7 +64,7 @@
           </b-col>
           <b-col md="9">
             <b-row>
-              <div class="form-header text-uppercase violet">
+              <div class="t-fredoka form-header text-uppercase violet">
                 háblanos de ti
               </div>
             </b-row>
@@ -130,7 +130,7 @@
           </b-col>
           <b-col md="9">
             <b-row>
-              <div class="form-header text-uppercase violet">
+              <div class="t-fredoka form-header text-uppercase violet">
                 háblanos del albergue
               </div>
             </b-row>
@@ -314,7 +314,7 @@
           </b-col>
           <b-col md="9">
             <b-row>
-              <div class="form-header text-uppercase violet">
+              <div class="t-fredoka form-header text-uppercase violet">
                 fotos de los gatos del albergue
               </div>
             </b-row>
@@ -408,7 +408,7 @@
           </b-col>
           <b-col md="9">
             <b-row>
-              <div class="form-header text-uppercase violet">
+              <div class="t-fredoka form-header text-uppercase violet">
                 canales de donación
               </div>
             </b-row>
@@ -575,6 +575,7 @@
             </b-row>
           </b-col>
         </b-row>
+        <!-- Contacto -->
         <b-row>
           <b-col md="3">
             <b-img
@@ -586,7 +587,7 @@
           </b-col>
           <b-col md="9">
             <b-row>
-              <div class="form-header text-uppercase violet">
+              <div class="t-fredoka form-header text-uppercase violet">
                 contacto
               </div>
             </b-row>
@@ -648,6 +649,7 @@
             </b-row>
           </b-col>
         </b-row>
+        <!-- Recomendaciones -->
         <b-row>
           <b-col md="3">
             <b-img
@@ -659,7 +661,7 @@
           </b-col>
           <b-col md="9">
             <b-row>
-              <div class="form-header text-uppercase violet">
+              <div class="t-fredoka form-header text-uppercase violet">
                 recomendaciones (opcional)
               </div>
             </b-row>

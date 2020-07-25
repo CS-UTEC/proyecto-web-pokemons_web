@@ -12,7 +12,7 @@
           <br />
           <br />
           <b-row>
-            <p class="t-2 text-justify">
+            <p class="t-2 t-quicksand text-justify">
               Somos una organización sin fines de lucro creada con la
               colaboración de la comunidad estudiantial de la Universidad de
               Ingeniería y Tecnología con la responsabilidad social de ayudar a

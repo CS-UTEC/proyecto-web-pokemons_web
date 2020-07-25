@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <b-row>
-      <b-col>
+      <b-col class="t-quicksand">
         <b-row align-h="center">
           <b-img class="numbers" src="~/static/img/4.png" alt="" fluid></b-img>
         </b-row>
@@ -85,7 +85,7 @@
             <div class="line3"></div>
           </b-col>
           <b-col md="6">
-            <div class="text-uppercase blue t-3 text-center">
+            <div class="t-bebas text-uppercase blue t-3 text-center">
               contáctanos
             </div>
           </b-col>
@@ -96,15 +96,15 @@
         <br />
         <br />
         <b-row>
-          <b-col>
-            <label for="nombres">Nombres</label>
+          <b-col class="t-quicksand">
+            <label for="nombres" class="t-fredoka">Nombres</label>
             <b-input
               id="nombres"
               v-model="form.name"
               placeholder="Nombres"
             ></b-input>
             <br />
-            <label for="telf">Celular</label>
+            <label for="telf" class="t-fredoka">Celular</label>
             <b-input
               id="telf"
               v-model="form.cellphone"
@@ -112,15 +112,15 @@
               placeholder="+51"
             ></b-input>
           </b-col>
-          <b-col>
-            <label for="apellidos">Apellidos</label>
+          <b-col class="t-quicksand">
+            <label for="apellidos" class="t-fredoka">Apellidos</label>
             <b-input
               id="apellidos"
               v-model="form.lastname"
               placeholder="Apellidos"
             ></b-input>
             <br />
-            <label for="correo">Correo</label>
+            <label for="correo" class="t-fredoka">Correo</label>
             <b-input
               id="correo"
               v-model="form.mail"
@@ -130,13 +130,14 @@
           </b-col>
         </b-row>
         <b-row>
-          <b-col>
-            <label for="message">Mensaje:</label>
+          <b-col class="t-quicksand">
+            <label for="message" class="t-fredoka">Mensaje:</label>
             <textarea
               id="message"
               v-model="form.message"
               class="form-control"
               rows="9"
+              placeholder="Escribir algo aqui"
             ></textarea>
           </b-col>
         </b-row>

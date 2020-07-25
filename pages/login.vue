@@ -14,7 +14,7 @@
         <br />
         <br />
         <b-row align-h="center">
-          <b-col>
+          <b-col class="t-quicksand">
             <b-form-group label="Correo electrónico:" label-for="email">
               <b-form-input
                 id="email"
@@ -36,7 +36,7 @@
             </b-form-group>
             <br />
             <br />
-            <b-row align-h="center">
+            <b-row align-h="center" class="t-quicksand">
               <b-button variant="violet">Ingresar</b-button>
             </b-row>
           </b-col>

@@ -31,6 +31,11 @@ export default {
         href:
           'https://fonts.googleapis.com/css2?family=Fredoka+One&family=Quicksand:wght@500;700&display=swap',
       },
+      {
+        rel: 'stylesheet',
+        href:
+          'https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap',
+      },
     ],
   },
   /*
