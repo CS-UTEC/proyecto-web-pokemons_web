@@ -76,6 +76,7 @@ export default {
     // Doc: https://axios.nuxtjs.org/usage
     '@nuxtjs/axios',
     'nuxt-material-design-icons',
+    '@nuxtjs/auth',
   ],
   /*
    ** Axios module configuration
@@ -93,11 +94,17 @@ export default {
     strategies: {
       local: {
         endpoints: {
-          login: { url: '/login_temp', method: 'post' },
+          login: {
+            url: 'http://52.67.175.153:8080/authenticate',
+            method: 'post',
+          },
           // logout: { url: '', method: 'post' }
         },
         autoFetchUser: false,
       },
     },
+  },
+  router: {
+    middleware: ['auth'],
   },
 }

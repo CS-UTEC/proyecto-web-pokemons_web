@@ -107,12 +107,12 @@
                   placeholder="Apellidos"
                 ></b-input>
                 <br />
-                <label for="correo">Correo</label>
+                <label for="password">Contraseña</label>
                 <b-input
-                  id="correo"
-                  v-model="form.mail"
-                  type="email"
-                  placeholder="ejemplo@mail.com"
+                  id="password"
+                  v-model="form.password"
+                  type="password"
+                  placeholder="Ingresa tu contraseña"
                 ></b-input>
               </b-col>
             </b-row>
@@ -772,6 +772,7 @@
 
 <script>
   export default {
+    auth: false,
     data() {
       return {
         aceptado: false,
@@ -780,6 +781,7 @@
           lastname: '',
           cellphone: '',
           mail: '',
+          password: '',
           type: null,
           quantity: null,
           refuge: '',
@@ -905,7 +907,8 @@
           apellidos: this.form.lastname,
           representante: this.form.owner === 'si',
           celular: this.form.cellphone,
-          correo: this.form.mail,
+          correo: this.form.email,
+          contrasenha: this.form.password,
         }
         const albergue = {
           nombre: this.form.refuge,

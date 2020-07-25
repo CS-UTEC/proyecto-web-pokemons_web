@@ -207,6 +207,7 @@
 
 <script>
   export default {
+    auth: false,
     data() {
       return {
         videoSrc: 'https://www.youtube.com/embed/MNsTTYcblSY',

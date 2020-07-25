@@ -48,13 +48,25 @@
                 text="Hola ¿Tienes un albergue?"
               >
                 <b-dropdown-item
+                  v-if="!$auth.loggedIn"
                   to="/register"
                   class="pb-2 drop-class text-center"
                   ><span class="text-uppercase login-line"
                     >Registrarme</span
                   ></b-dropdown-item
                 >
-                <b-dropdown-item to="/login" class="pb-2 drop-class text-center"
+                <b-dropdown-item
+                  v-if="$auth.loggedIn"
+                  @click="logOut"
+                  class="pb-2 drop-class text-center"
+                  ><span class="text-uppercase login-line"
+                    >Cerrar Sesion</span
+                  ></b-dropdown-item
+                >
+                <b-dropdown-item
+                  v-else
+                  to="/login"
+                  class="pb-2 drop-class text-center"
                   ><span class="text-uppercase login-line"
                     >Ingresar</span
                   ></b-dropdown-item
@@ -69,5 +81,16 @@
 </template>
 
 <script>
-  export default {}
+  export default {
+    auth: false,
+    data() {
+      return {}
+    },
+    methods: {
+      logOut() {
+        this.$auth.logout()
+        this.$router.push('/')
+      },
+    },
+  }
 </script>
