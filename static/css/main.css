@@ -376,3 +376,40 @@ body {
 .fit img {
   object-fit: contain;
 }
+
+.colorDarken {
+  background-color: #dfbad7;
+}
+
+.maxHeight {
+  height: 83vh;
+  overflow-y: auto;
+}
+
+/* width */
+::-webkit-scrollbar {
+  padding-top: 7px;
+  width: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #778bb6;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #a76da8;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgb(9, 45, 112);
+}
+
+.albergue {
+  width: 100%;
+  max-height: auto;
+  margin: 1rem;
+  background-color: #bee5ff;
+}

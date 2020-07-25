@@ -51,7 +51,7 @@
       </b-col>
     </b-row>
     <b-row class="mt-5">
-      <b-form class="form-register">
+      <div class="form-register">
         <!-- Hablanos de ti -->
         <b-row>
           <b-col md="3">
@@ -338,7 +338,7 @@
                   <label :for="index" class="cat-photo">
                     <b-img
                       class="cat-photo"
-                      :src="cat.file === null ? photoPlaceholder : cat.file"
+                      :src="cat.src === '' ? photoPlaceholder : cat.src"
                     ></b-img>
                   </label>
                   <input
@@ -765,7 +765,7 @@
             >Enviar Solicitud</b-button
           >
         </b-row>
-      </b-form>
+      </div>
     </b-row>
   </b-container>
 </template>
@@ -820,36 +820,42 @@
               edad: '',
               adopta: null,
               file: null,
+              src: '',
             },
             {
               nombre: '',
               edad: '',
               adopta: null,
               file: null,
+              src: '',
             },
             {
               nombre: '',
               edad: '',
               adopta: null,
               file: null,
+              src: '',
             },
             {
               nombre: '',
               edad: '',
               adopta: null,
               file: null,
+              src: '',
             },
             {
               nombre: '',
               edad: '',
               adopta: null,
               file: null,
+              src: '',
             },
             {
               nombre: '',
               edad: '',
               adopta: null,
               file: null,
+              src: '',
             },
           ],
         },
@@ -884,90 +890,103 @@
     methods: {
       onFileChange(index, e) {
         const file = e.target.files[0]
+        this.form.cats[index].file = e.target.files[0]
         const reader = new FileReader()
         reader.onload = (e) => {
-          this.form.cats[index].file = e.target.result
+          this.form.cats[index].src = e.target.result
         }
         reader.readAsDataURL(file)
       },
       async onSubmit() {
         const url = '/albergue'
-        const json = {
-          admin: {
-            nombre: this.form.name,
-            apellidos: this.form.lastname,
-            representante: this.form.owner,
-            celular: this.form.cellphone,
-            correo: this.form.mail,
-          },
-          albergue: {
-            nombre: this.form.refuge,
-            anios: this.form.years,
-            direccion: this.form.address,
-            urbanizacion: this.form.urbanization,
-            distrito: this.form.district,
-            ciudad: this.form.city,
-            departamento: this.form.department,
-            tamanio: this.form.size,
-            material: this.form.material,
-            gasto: this.form.budget,
-            pertenencia: this.form.own,
-            voluntarios: this.form.volunteers,
-            albergan: this.form.type,
-            num_gatos: this.form.quantity,
-            acep_donaciones: this.form.donations,
-            acep_apoyo: this.form.aceptVolunteers,
-            banco_name: 'bcp',
-            banco_number: this.form.bcp,
-            banco_cci: this.form.bcpCci,
-            facebook: this.form.facebook,
-            instagram: this.form.instagram,
-            correo: this.form.email,
-            otro_contacto: this.form.otherContact,
-          },
-          gato0: {
-            nombre: this.cats[0].nombre,
-            img: this.cats[0].file,
-            edad: this.cats[0].edad,
-            adopcion: this.cats[0].adopta,
-          },
-          gato1: {
-            nombre: this.cats[1].nombre,
-            img: this.cats[1].file,
-            edad: this.cats[1].edad,
-            adopcion: this.cats[1].adopta,
-          },
-          gato2: {
-            nombre: this.cats[2].nombre,
-            img: this.cats[2].file,
-            edad: this.cats[2].edad,
-            adopcion: this.cats[2].adopta,
-          },
-          gato3: {
-            nombre: this.cats[3].nombre,
-            img: this.cats[3].file,
-            edad: this.cats[3].edad,
-            adopcion: this.cats[3].adopta,
-          },
-          gato4: {
-            nombre: this.cats[4].nombre,
-            img: this.cats[4].file,
-            edad: this.cats[4].edad,
-            adopcion: this.cats[4].adopta,
-          },
-          gato5: {
-            nombre: this.cats[5].nombre,
-            img: this.cats[5].file,
-            edad: this.cats[5].edad,
-            adopcion: this.cats[5].adopta,
-          },
+        const formData = new FormData()
+        const admin = {
+          nombre: this.form.name,
+          apellidos: this.form.lastname,
+          representante: this.form.owner === 'si',
+          celular: this.form.cellphone,
+          correo: this.form.mail,
         }
+        const albergue = {
+          nombre: this.form.refuge,
+          anios: this.form.years,
+          direccion: this.form.address,
+          urbanizacion: this.form.urbanization,
+          distrito: this.form.district,
+          ciudad: this.form.city,
+          departamento: this.form.department,
+          tamanio: this.form.size,
+          material: this.form.material,
+          gasto: this.form.budget,
+          pertenencia: this.form.own === 'propio',
+          voluntarios: this.form.volunteers,
+          albergan: this.form.type,
+          num_gatos: this.form.quantity,
+          acep_donaciones: this.form.donations === 'si',
+          acep_apoyo: this.form.aceptVolunteers === 'si',
+          banco_name: 'bcp',
+          banco_number: this.form.bcp,
+          banco_cci: this.form.bcpCci,
+          facebook: this.form.facebook,
+          instagram: this.form.instagram,
+          correo: this.form.email,
+          otro_contacto: this.form.otherContact,
+        }
+        const gato0 = {
+          nombre: this.form.cats[0].nombre,
+          edad: this.form.cats[0].edad,
+          adopcion: this.form.cats[0].adopta === 'Si',
+        }
+        const gato1 = {
+          nombre: this.form.cats[1].nombre,
+          edad: this.form.cats[1].edad,
+          adopcion: this.form.cats[1].adopta === 'Si',
+        }
+        const gato2 = {
+          nombre: this.form.cats[2].nombre,
+          edad: this.form.cats[2].edad,
+          adopcion: this.form.cats[2].adopta === 'Si',
+        }
+        const gato3 = {
+          nombre: this.form.cats[3].nombre,
+          edad: this.form.cats[3].edad,
+          adopcion: this.form.cats[3].adopta === 'Si',
+        }
+        const gato4 = {
+          nombre: this.form.cats[4].nombre,
+          edad: this.form.cats[4].edad,
+          adopcion: this.form.cats[4].adopta === 'Si',
+        }
+        const gato5 = {
+          nombre: this.form.cats[5].nombre,
+          edad: this.form.cats[5].edad,
+          adopcion: this.form.cats[5].adopta === 'Si',
+        }
+        const data = {
+          admin,
+          albergue,
+          gato0,
+          gato1,
+          gato2,
+          gato3,
+          gato4,
+          gato5,
+        }
+        for (let i = 0; i < 6; i++) {
+          const file = this.form.cats[i].file
+          formData.append('files[' + i + ']', file)
+          /* eslint-disable */
+          console.log(formData)
+        }
+        formData.append('data', JSON.stringify(data))
         /* eslint-disable */
         await this.$axios
-          .$post(url, json)
+          .$post(url, formData, {
+            headers: { 'Content-Type': false, processData: false },
+          })
           .then((res) => {
-            this.aceptado = res
-            console.log('Aceptado')
+            // this.aceptado = res
+            console.log(res)
             this.$router.push('/login')
           })
           .catch((e) => {
