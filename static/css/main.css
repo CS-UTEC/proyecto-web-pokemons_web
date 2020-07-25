@@ -1,0 +1,378 @@
+@font-face {
+  font-family: 'Kollektif';
+  src: url('/static/css/fonts/Kollektif.ttf');
+  /* 	src: url("fonts/OpenSansRegular/OpenSansRegular.eot?#iefix")format("embedded-opentype"),
+	url("fonts/OpenSansRegular/OpenSansRegular.woff") format("woff"),
+	url("fonts/Kollektif.ttf") format("truetype"); */
+  font-style: normal;
+  font-weight: normal;
+}
+
+.t-kollektif {
+  font-family: 'Kollektif' !important;
+}
+
+.t-fredoka {
+  font-family: 'Fredoka One', cursive !important;
+}
+
+.t-quicksand {
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.t- .t-1 {
+  font-size: 1rem;
+}
+.t-2 {
+  font-size: 2rem;
+}
+.t-3 {
+  font-size: 3rem;
+}
+.t-4 {
+  font-size: 4rem;
+}
+.t-5 {
+  font-size: 5rem;
+}
+.t-6 {
+  font-size: 6rem;
+}
+.t-7 {
+  font-size: 7rem;
+}
+.t-8 {
+  font-size: 8rem;
+}
+.t-9 {
+  font-size: 9rem;
+}
+.t-10 {
+  font-size: 10rem;
+}
+
+.img-brand {
+  margin-top: -15px;
+}
+
+.item a {
+  padding-top: 25px;
+  color: #fff !important;
+  font-size: 1vw;
+  /* font-family: 'Fredoka One', cursive !important; */
+  font-family: 'Quicksand', sans-serif !important;
+}
+
+.drop-class a {
+  padding: 0.5rem 2rem 0;
+}
+
+.brand:after {
+  content: '';
+  position: absolute;
+  top: 16px;
+  left: -50px;
+  border-left: 50px solid #bee5ff;
+  border-right: 50px solid #bee5ff;
+  border-bottom: 40px solid #bee5ff;
+  z-index: -1000;
+}
+
+.brand2:after {
+  content: '';
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  border-left: 80vw solid #ba6dac;
+  border-right: 80vw solid #ba6dac;
+  border-bottom: 35px solid #ba6dac;
+  z-index: -1000;
+}
+
+body {
+  font-family: 'Fredoka One', cursive !important;
+}
+.first-line {
+  font-size: 3em;
+}
+.second-line {
+  font-size: 2em;
+}
+.blue {
+  color: #3f5bae;
+}
+.gray {
+  color: #f3f4f4;
+}
+.gray-strong {
+  color: #aaa;
+}
+.skyblue {
+  color: #c9e4ff;
+}
+.yellow {
+  color: #ffeb12;
+}
+.violet {
+  color: #a76da8;
+}
+.meowtec-vid {
+  width: 100%;
+  height: 80vh;
+}
+.heart {
+  width: 8rem;
+  height: 8rem;
+}
+.cats1 {
+  margin-left: -90px;
+  max-width: 100%;
+  max-height: 100%;
+}
+.container1 {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.line {
+  position: relative;
+  width: 70%;
+  border-bottom: 5px solid #a76da8;
+}
+.line:before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  border-left: 15px solid #a76da8;
+  border-right: 15px solid #a76da8;
+  border-bottom: 30px solid #a76da8;
+  z-index: -1000;
+}
+
+.line:after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  right: 0;
+  border-left: 15px solid #a76da8;
+  border-right: 15px solid #a76da8;
+  border-bottom: 30px solid #a76da8;
+  z-index: -1000;
+}
+.line2 {
+  position: relative;
+  width: 100%;
+  border-bottom: 5px solid #3f5bae;
+}
+.line2:before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  border-left: 15px solid #3f5bae;
+  border-right: 15px solid #3f5bae;
+  border-bottom: 30px solid #3f5bae;
+  z-index: -1000;
+}
+
+.line2:after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  right: 0;
+  border-left: 15px solid #3f5bae;
+  border-right: 15px solid #3f5bae;
+  border-bottom: 30px solid #3f5bae;
+  z-index: -1000;
+}
+.line3 {
+  position: relative;
+  width: 100%;
+  border-bottom: 5px solid #ffeb12;
+}
+.line3:before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  left: 0;
+  border-left: 15px solid #ffeb12;
+  border-right: 15px solid #ffeb12;
+  border-bottom: 30px solid #ffeb12;
+  z-index: -1000;
+}
+
+.line3:after {
+  content: '';
+  position: absolute;
+  top: -12px;
+  right: 0;
+  border-left: 15px solid #ffeb12;
+  border-right: 15px solid #ffeb12;
+  border-bottom: 30px solid #ffeb12;
+  z-index: -1000;
+}
+
+.header2 {
+  font-size: 3rem;
+}
+
+.cats2 {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.blue-p {
+  background-color: rgb(238, 246, 255);
+  color: #aaa;
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+  padding: 2rem 4rem 0.8rem 4rem;
+  font-family: 'Quicksand', sans-serif !important;
+}
+.yellow-p {
+  background-color: rgb(255, 250, 196);
+  color: #aaa;
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+  padding: 3rem 4rem 1rem 4rem;
+  font-family: 'Quicksand', sans-serif !important;
+}
+.grey-p {
+  background-color: #f3f4f4;
+  color: #aaa;
+  font-size: 1.1rem;
+  line-height: 2.5rem;
+  padding: 3rem 4rem 2rem 4rem;
+  font-family: 'Quicksand', sans-serif !important;
+}
+.img-container {
+  position: relative;
+}
+.img-name {
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3rem;
+  position: absolute;
+}
+.second-container {
+  padding: 10px 7vw;
+  margin-top: 20px;
+}
+.rows {
+  max-width: 100%;
+}
+.title {
+  width: 100%;
+  color: #a76da8;
+  font-size: 2rem;
+  background-color: rgb(238, 246, 255);
+}
+.login-line {
+  color: #000 !important;
+}
+.login-line:hover {
+  color: #a76da8 !important;
+}
+
+.btn-violet {
+  background-color: #a76da8;
+  color: #fff !important;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  border-radius: 10px;
+  padding: 10px 30px;
+  border: 4px solid #fff;
+}
+
+.btn-violet:hover {
+  color: rgb(184, 184, 184) !important;
+  border: 4px solid rgb(227, 188, 226);
+}
+
+.btn-violet:active {
+  outline: none !important;
+}
+
+.green {
+  color: rgb(14, 192, 14);
+}
+.red {
+  color: red;
+}
+.banner {
+  background-color: rgb(101, 123, 190);
+  font-size: 4vw;
+}
+.info {
+  background-color: rgb(201, 228, 255);
+}
+.info-title {
+  font-size: 1.5rem;
+  text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+}
+.p-info {
+  color: #aaa;
+  font-size: 1.2rem;
+  padding: 1rem 3rem;
+  line-height: 2.5rem;
+}
+.yellow-circles {
+  border-left: 1.5rem dotted #ffeb12;
+  border-right: 1.5rem dotted #ffeb12;
+}
+.form-header {
+  font-size: 2rem;
+}
+.form-register .row {
+  margin: 0.5rem;
+}
+.numbers {
+  max-width: 70%;
+  max-height: 70%;
+  float: right;
+}
+.size {
+  text-align: right;
+}
+.image-upload > input {
+  display: none;
+}
+
+.image-upload img {
+  max-width: 100%;
+  cursor: pointer;
+}
+.cat-photo {
+  height: 40vh;
+  width: 40vh;
+}
+.cat-photo img {
+  object-fit: fill;
+}
+
+.contact {
+  font-size: 1.5rem;
+}
+
+.quienes {
+  background-color: rgb(63, 91, 174);
+  color: #fff;
+  font-family: 'Quicksand', sans-serif !important;
+  margin-left: -10rem;
+  padding: 4rem 5rem;
+  z-index: 2;
+}
+
+.somos {
+  border-bottom: 0.5rem solid #fff;
+}
+
+.fit img {
+  object-fit: contain;
+}
