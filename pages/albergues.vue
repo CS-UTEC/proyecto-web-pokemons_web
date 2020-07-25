@@ -7,18 +7,16 @@
           solo
           clearable
           append-icon="mdi-magnify"
-          @click:append="handleSearch"
-          @click:clear="onSubmit"
         ></v-text-field>
       </v-row>
     </b-col>
     <b-col md="9" class="maxHeight">
       <b-row align-v="start">
         <v-card
-          v-for="albergue in data"
+          v-for="albergue in handleSearch"
           :key="albergue.nombre"
           outlined
-          class="albergue t-helvetica"
+          class="albergue t-bebas"
         >
           <v-list-item>
             <b-row>
@@ -34,11 +32,29 @@
                   <b-col> Desde {{ 2020 - albergue.anios }} </b-col>
                   <b-col> {{ albergue.num_gatos }} rescatados </b-col>
                 </b-row>
+                <b-row align-v="center">
+                  <b-col>
+                    {{ albergue.facebook }}
+                  </b-col>
+                  <b-col>
+                    {{ albergue.instagram }}
+                  </b-col>
+                  <b-col>
+                    {{ albergue.correo }}
+                  </b-col>
+                </b-row>
               </b-col>
               <b-col>
-                <div>
-                  {{ albergue.nombre }}
-                </div>
+                <b-row align-h="end">
+                  <div>
+                    {{ albergue.nombre }}
+                  </div>
+                </b-row>
+                <b-row align-h="end">
+                  <div>
+                    {{ albergue.telefono }}
+                  </div>
+                </b-row>
               </b-col>
             </b-row>
           </v-list-item>
@@ -61,13 +77,22 @@
     },
     data() {
       return {
-        data: null,
+        data: [],
         searchVideo: '',
       }
     },
-    methods: {
-      handleSearch() {},
-      onSubmit() {},
+    computed: {
+      handleSearch() {
+        return this.data.filter((albergue) => {
+          /* eslint-disable */
+          console.log(albergue)
+          return (
+            albergue.nombre.includes(this.searchVideo) ||
+            albergue.albergan.includes(this.searchVideo) ||
+            albergue.nombre_albergue.includes(this.searchVideo)
+          )
+        })
+      },
     },
   }
 </script>

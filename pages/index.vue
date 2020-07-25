@@ -6,16 +6,18 @@
           <div>
             <b-img class="heart" src="~/static/img/3.png" alt="" fluid></b-img>
           </div>
-          <div class="text-uppercase first-line blue">
-            esterilizar
+          <div class="t-bebas text-center">
+            <div class="text-uppercase display-2 blue">
+              esterilizar
+            </div>
+            <div class="text-uppercase display-4 violet">
+              es un gesto de
+            </div>
+            <div class="text-uppercase display-2 blue">
+              humanidad
+            </div>
           </div>
-          <div class="text-uppercase second-line violet">
-            es un gesto de
-          </div>
-          <div class="text-uppercase first-line blue">
-            humanidad
-          </div>
-          <div class="line mt-5 mb-5"></div>
+          <div class="line mt-1 mb-5"></div>
           <div>
             <b-img
               class="cats1"
@@ -40,14 +42,14 @@
       <b-col md="7">
         <div class="line2"></div>
       </b-col>
-      <b-col md="5">
+      <b-col class="t-bebas display-1" md="5">
         <div class="text-uppercase blue header2">
           ¿Cómo puedes <span class="yellow">ayudarlos</span>?
         </div>
       </b-col>
     </b-row>
-    <b-container fluid class="second-container">
-      <b-row align-h="center" class="rows">
+    <b-container fluid class="second-container t-quicksand">
+      <b-row align-h="justify" class="rows">
         <b-col md="4" class="p-0">
           <div class="img-container">
             <b-img
@@ -60,22 +62,22 @@
           </div>
         </b-col>
         <b-col md="8" class="blue-p">
-          <p>
+          <h4>
             Los albergues sirven como espacio de acogida a gatos y perros sin
             hogar, perdidos o abandonados. Debido a que en Lima existe una
             sobrepoblación de gatos, estos refugios no se abastecen y necesitan
             de mucha ayuda para mantener a los animales que ya rescataron.
             Conoce un poco más de los albergues dando click
             <a to="/albergues"><span class="yellow">aquí</span></a>
-          </p>
+          </h4>
         </b-col>
       </b-row>
-      <b-row align-h="center" class="rows">
+      <b-row align-h="justify" class="rows">
         <b-col md="4" class="yellow-p">
-          <p>
+          <h4>
             Un gatito en tu hogar es toda una aventura, tendrás a un compañero
             de por vida que alegrará tu vida día a día.
-          </p>
+          </h4>
         </b-col>
         <b-col md="4" class="p-0">
           <div class="img-container">
@@ -89,22 +91,22 @@
           </div>
         </b-col>
         <b-col md="4" class="yellow-p">
-          <p>
+          <h4>
             ¿Estás listo para rescatar una vida? Puedes dar click
             <a to="/adopta"><span class="yellow">aquí</span></a> para ver a
             todos los gatitos que necesitan una segunda oportunidad.
-          </p>
+          </h4>
         </b-col>
       </b-row>
       <b-row align-h="center" class="rows">
-        <b-col md="8" class="blue-p" align-h="center">
-          <p>
+        <b-col md="8" class="blue-p" align-h="justify">
+          <h4>
             Atender a 20, 30, 50 o más de 100 gatitos no es fácil, necesitan
             apoyo de personas para alimentarlos, asearlos, construyéndoles
             casitas, etc. Puedes ayudar con unas pocas horas de tu tiempo, click
             <a to="/contacto"><span class="yellow">aquí</span></a> para más
             información.
-          </p>
+          </h4>
         </b-col>
         <b-col md="4" class="p-0">
           <div class="img-container">
@@ -129,13 +131,13 @@
             fluid-grow
           ></b-img>
         </b-row>
-        <b-row>
-          <div class="title text-center text-uppercase">
+        <b-row class="mt-4">
+          <div class="t-bebas title text-center text-uppercase">
             agradecimientos
           </div>
         </b-row>
         <b-row class="p-2">
-          <p class="grey-p mt-1">
+          <p class="t-quicksand grey-p mt-1 text-center">
             Todos estos gatitos fueron auxiliados, rescatados, llevados al
             veterinario, acompañados en su proceso de recuperación y adoptados.
             Gracias al apoyo de nuestros miembros salvamos muchas vidas
@@ -144,7 +146,7 @@
       </b-col>
       <b-col md="6">
         <b-row align-h="center">
-          <div class="text-center text-uppercase first-line blue">
+          <div class="t-bebas text-center text-uppercase display-2 blue">
             nuestros casos de <span class="violet">éxito</span>
           </div>
         </b-row>
@@ -170,12 +172,12 @@
           ></b-img>
         </b-row>
         <b-row>
-          <div class="title text-center text-uppercase">
+          <div class="t-bebas title text-center text-uppercase">
             donaciones
           </div>
         </b-row>
         <b-row class="p-2">
-          <p class="grey-p mt-1">
+          <p class="t-quicksand grey-p text-center">
             Pueden ayudarnos con efectivo o donando galletitas, mantitas,
             camitas, etc.
             <br />

@@ -20,6 +20,10 @@
   font-family: 'Quicksand', sans-serif !important;
 }
 
+.t-bebas {
+  font-family: 'Bebas Neue', cursive !important;
+}
+
 .t-1 {
   font-size: 1rem;
 }
@@ -410,6 +414,6 @@ body {
 .albergue {
   width: 100%;
   max-height: auto;
-  margin: 1rem;
+  margin: 1rem 3rem;
   background-color: #bee5ff;
 }
