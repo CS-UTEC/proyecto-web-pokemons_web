@@ -136,7 +136,7 @@
               id="message"
               v-model="form.message"
               class="form-control"
-              rows="9"
+              rows="11"
               placeholder="Escribir algo aqui"
             ></textarea>
           </b-col>
